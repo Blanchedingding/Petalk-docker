@@ -8,12 +8,12 @@ ADD ./app.js /app/
 ADD ./package.json /app/
 
 ADD ./bin /app/bin
-ADD ./node_modules /app/node_modules
 ADD ./public /app/public
 ADD ./routes /app/routes
 ADD ./views /app/views
 
-# RUN npm install
+RUN npm install
+
 CMD [ "npm", "start" ]
 
 EXPOSE 3000
